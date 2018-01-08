@@ -7,7 +7,9 @@ cd ~
 git clone --recursive https://github.com/tobias-pook/tpdotfiles.git
 cd tpdotfiles
 # Create .env file
-./dotdrop/bootstrap.sh
+cd ./dotdrop
+pip install --user .
+./bootstrap.sh
 alias dotdrop='eval $(grep -v "^#" ~/tpdotfiles/.env) ~/tpdotfiles/dotdrop.sh'
 dotdrop.sh install --profile MYPROFILE
 ```
