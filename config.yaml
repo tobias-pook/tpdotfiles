@@ -9,8 +9,12 @@ dotfiles:
   f_bashstyle:
     dst: ~/.bashstyle
     src: bashstyle
+  f_gitconfig:
+    dst: ~/.gitconfig
+    src: gitconfig
 profiles:
   tpx1:
     dotfiles:
     - f_bashrc
     - f_bashstyle
+    - f_gitconfig
