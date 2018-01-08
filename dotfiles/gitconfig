@@ -1,0 +1,46 @@
+[user]
+	name = {{@@ env['GIT_USERNAME'] @@}}
+	email = {{@@ env['GIT_MAIL'] @@}}
+
+[core]
+   editor = vim
+
+[branch]
+   autosetuprebase = always
+
+[alias]   # shortcuts
+   b      = branch
+   ba     = branch -a
+   co     = checkout
+   com    = checkout master
+   ci     = commit
+   cia    = commit -a
+   ciaa   = commit -a --amend
+   cp     = cherry-pick
+   d      = diff -b
+   dc     = diff -b --cached
+   ds     = diff -b --stat
+   dt     = difftool
+   h      = help
+   glog   = log --graph --all --oneline           # show graphical log
+   gl     = log --graph --all \
+            --format=format:'%Cred%h%Creset -%C(bold yellow)%d%Creset %s %Cgreen(%cr)%Creset - %C(bold white)%an' --abbrev-commit --date=relative
+   ls     = ls-files -t
+   r      = rebase
+   ri     = rebase -i                             # rebase interactively
+   rim    = rebase -i master                      # rebase interactively on master
+   rc     = rebase --continue
+   ra     = rebase --abort
+   s      = status
+   sb     = show-branch
+   sbm    = show-branch --current master
+   sbs    = show-branch --sha1-name
+   sbsm   = show-branch --sha1-name --current master
+   sh     = show
+   ss     = show --stat
+   st     = stash
+   sub    = submodule
+   ps     = log --pretty=oneline origin..master   # summary of what you're going to push
+   w      = whatchanged -p                        # like "git log", but include the diffs
+   wo     = whatchanged -p origin..               # changes since we last did a push
+   ws     = whatchanged --stat                    # show all changes (for a file)
