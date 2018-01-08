@@ -1,0 +1,16 @@
+config:
+  backup: true
+  create: true
+  dotpath: dotfiles
+dotfiles:
+  f_bashrc:
+    dst: ~/.bashrc
+    src: bashrc
+  f_bashstyle:
+    dst: ~/.bashstyle
+    src: bashstyle
+profiles:
+  tpx1:
+    dotfiles:
+    - f_bashrc
+    - f_bashstyle
